@@ -1,0 +1,32 @@
+{
+  "name": "nodejs-hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dianalevashova/nodejs-hw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dianalevashova/nodejs-hw/issues"
+  },
+  "homepage": "https://github.com/dianalevashova/nodejs-hw#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0",
+    "globals": "^17.12.0",
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.1"
+  }
+}
