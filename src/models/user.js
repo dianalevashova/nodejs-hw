@@ -21,11 +21,10 @@ const userSchema = new Schema(
   { timestamps: true },
 );
 
-userSchema.pre('save', function (next) {
+userSchema.pre('save', function () {
   if (!this.username) {
     this.username = this.email;
   }
-  next();
 });
 
 userSchema.methods.toJSON = function () {
