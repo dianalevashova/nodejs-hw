@@ -13,3 +13,15 @@ export const loginUserSchema = celebrate({
     password: Joi.string().required(),
   }),
 });
+export const requestResetEmailSchema = celebrate({
+  [Segments.BODY]: Joi.object({
+    email: Joi.string().email().required(),
+  }),
+});
+
+export const resetPasswordSchema = celebrate({
+  [Segments.BODY]: Joi.object({
+    token: Joi.string().required(),
+    password: Joi.string().required(),
+  }),
+});
