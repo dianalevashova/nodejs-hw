@@ -12,10 +12,8 @@ import {
   noteIdSchema,
   updateNoteSchema,
 } from '../validations/notesValidation.js';
-import { authenticate } from '../middleware/authenticate.js';
 
 const router = Router();
-router.use(authenticate);
 
 router.get('/notes', getAllNotesSchema, getAllNotes);
 router.get('/notes/:noteId', noteIdSchema, getNoteById);
