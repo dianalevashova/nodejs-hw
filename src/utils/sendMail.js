@@ -16,11 +16,9 @@ const transporter = nodemailer.createTransport({
   socketTimeout: 10000,
 });
 
-export const sendEmail = async ({ to, subject, html }) => {
-  await transporter.sendMail({
+export const sendEmail = async (options) => {
+  return transporter.sendMail({
     from: process.env.SMTP_FROM,
-    to,
-    subject,
-    html,
+    ...options,
   });
 };
